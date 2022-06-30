@@ -5,7 +5,7 @@ const reviewSchema = new mongoose.Schema(
     name: { type: String, required: true },
     comment: { type: String, required: true },
     rating: { type: Number, required: true },
-    id: {type: Number, required: false}
+    id: { type: Number, required: false },
   },
   {
     timestamps: true,
@@ -21,6 +21,9 @@ const productSchema = new mongoose.Schema(
     brand: { type: String, required: true },
     category: { type: String, required: true },
     description: { type: String, required: true },
+    // discount: {
+    //   type: Number
+    // },
     price: { type: Number, required: true },
     countInStock: { type: Number, required: true },
     rating: { type: Number, required: true },
@@ -33,4 +36,4 @@ const productSchema = new mongoose.Schema(
 );
 const Product = mongoose.model('Product', productSchema);
 
-export default Product ;
+export default Product;

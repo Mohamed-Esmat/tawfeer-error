@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { Store } from '../Store';
 import { Helmet } from 'react-helmet-async';
 import Row from 'react-bootstrap/Row';
+import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import MessageBox from '../components/MessageBox';
 import ListGroup from 'react-bootstrap/ListGroup';
@@ -9,6 +10,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+// import couponCodeDiscount from '../../../backend/routes/discountRoute.js';
 
 export default function CartScreen() {
   const navigate = useNavigate();
@@ -34,6 +36,8 @@ export default function CartScreen() {
   const checkoutHandler = () => {
     navigate('/signin?redirect=/shipping');
   };
+  const checkExpirationTime = () => {};
+// setInterval(checkExpirationTime, 1000); // converting to millisecond
 
   return (
     <div>
@@ -60,7 +64,7 @@ export default function CartScreen() {
                       ></img>{' '}
                       <Link to={`/product/${item.slug}`}>{item.name}</Link>
                     </Col>
-                    <Col md={3} >
+                    <Col md={3}>
                       <Button
                         onClick={() =>
                           updateCartHandler(item, item.quantity - 1)
@@ -108,6 +112,19 @@ export default function CartScreen() {
                     {cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}
                   </h3>
                 </ListGroup.Item>
+                <ListGroup>
+                  <Form onSubmit={checkExpirationTime}>
+                    <Form.Group className="mb-3" controlId="email">
+                      {/**We use Form.Group to put label and input box next to each other */}
+                      <Form.Label>Coupon</Form.Label>
+                      <Form.Control
+                        type="text"
+                        // required
+                        // onChange={(e) => setEmail(e.target.value)}
+                      ></Form.Control>
+                    </Form.Group>
+                  </Form>
+                </ListGroup>
                 <ListGroup.Item>
                   <div className="d-grid">
                     <Button

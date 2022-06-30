@@ -155,13 +155,23 @@ function App() {
               className={
                 sidebarIsOpen
                   ? 'active-nav side-navbar d-flex justify-content-between flex-wrap flex-column'
-                  : 'side-navbar d-flex justify-content-between flex-wrap flex-column'
+                  : 'side-navbar d-flex justify-content-between flex-wrap flex-column position-absolute top-0'
               }
             >
               <Nav className="flex-column text-white w-100 p-2">
-                <Nav.Item>
-                  <strong>Categories</strong>
+                <div className='d-flex justify-content-between align-items-center'>
+                <Nav.Item >
+                  <strong >Categories</strong>
                 </Nav.Item>
+                <Nav.Item>
+                <Button
+                    variant="dark"
+                    onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
+                  >
+                    <i className="fas fa-bars"></i>
+                  </Button>
+                </Nav.Item>
+                </div>
                 {categories.map((category) => (
                   <Nav.Item key={category}>
                     <LinkContainer

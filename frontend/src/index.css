@@ -72,8 +72,9 @@ main {
   width: 240px;
   height: 100%;
   position: absolute;
-  left: -300px;
-  background-color: #100901;
+  z-index: 999999999;
+  top: -900px;
+  background-color: #212529;
   transition: 0.5s;
 }
 
@@ -81,7 +82,8 @@ main {
   transition: 0.4s;
 }
 .active-cont {
-  margin-left: 240px;
+  top: 0;
+  
 }
 .active-nav {
   left: 0;

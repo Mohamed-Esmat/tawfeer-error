@@ -102,3 +102,18 @@ export const payOrderEmailTemplate = (order) => {
   </p>
   `;
 };
+
+   
+// export const disCountPrice = async(req, res) => {
+//   let {discount , originalPrice} = req.body;
+//   var discountuse = discount/100;
+// }
+
+  // export const  coupongenerator = ()=> {
+  // var coupon = "";
+  // var possible = "abcdefghijklmnopqrstuvwxyz0123456789";
+  // for (var i = 0; i < 5; i++) {
+  // coupon += possible.charAt(Math.floor(Math.random() * possible.length));
+  // }
+  // return coupon;
+  // }

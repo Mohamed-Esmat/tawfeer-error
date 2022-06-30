@@ -27,7 +27,20 @@
 .App-link {
   color: #61dafb;
 }
-
+.active-nav
+{
+  left: 0;
+  top: 0 !important;
+}
+.side-navbar{
+  top: 0;
+}
+.sidenav{
+  max-width: 300px;
+  overflow: hidden;
+  width: 85%;
+  height: 100%;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
