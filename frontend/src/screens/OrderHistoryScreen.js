@@ -36,8 +36,8 @@ export default function OrderHistoryScreen() {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' }); // Coz i'm going show a loading message before send AJAX request
       try {
-        // what we did in the tryCatch is to send an AJAX request to this api and what we want is to get the orders of the current user
-        const { data } = await axios.get(
+       
+        const { data } = await axios.get( // what we did in the tryCatch is to send an AJAX request to this api and what we want is to get the orders of the current user
           `/api/orders/mine`,
 
           { headers: { Authorization: `Bearer ${userInfo.token}` } } // To get the current user we set the headers Authorization and the Bearer is the user token so we get the user in the backend and get the orders of the current user and return it to the frontend
