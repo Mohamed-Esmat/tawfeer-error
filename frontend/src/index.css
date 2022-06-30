@@ -14,7 +14,7 @@ main {
 }
 .btn-outline-yellow {
   color: #f0c040;
-  border: 0.025rem solid #f0c040;
+  border: 0.025rem solid #f0c040; /*space between header and footer */
 }
 .btn-outline-yellow:hover {
   color: #fff;
