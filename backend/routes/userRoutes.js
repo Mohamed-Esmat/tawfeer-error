@@ -53,7 +53,7 @@ userRouter.post(
   expressAsyncHandler(async (req, res) => {
     //using this function we catch the error inside the Async function inside it
     const user = await User.findOne({ email: req.body.email });
-    if (user) {
+    if (user) { //using this function we catch the error inside the Async function inside it
       if (bcrypt.compareSync(req.body.password, user.password)) {
         res.send({
           _id: user._id,
