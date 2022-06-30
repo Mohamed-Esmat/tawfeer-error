@@ -2,6 +2,10 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.15.0",
+    "npm": "8.5.5"
+  },
   "dependencies": {
     "@paypal/react-paypal-js": "^7.6.0",
     "@react-google-maps/api": "^2.8.1",
